@@ -2,6 +2,10 @@
 ### 0.1.7 (2014-04-14)
 
 
+<a name="0.1.7"></a>
+### 0.1.7 (2014-04-14)
+
+
 #### Bug Fixes
 
 * **Gruntfile.internal.coffee:** update bower.json  Changes to be committed: 	modified:   CHANGELOG.md 	modified: ([89af7459](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/89af7459a92e21951971390fac153bf314f48d8b))
