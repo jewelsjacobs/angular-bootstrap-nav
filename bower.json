@@ -3,7 +3,7 @@
     "name": "https://github.com/rackerlabs/angular-bootstrap-nav/graphs/contributors"
   },
   "name": "angular-bootstrap-nav",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": [
     "angular-bootstrap-nav.js"
   ],
