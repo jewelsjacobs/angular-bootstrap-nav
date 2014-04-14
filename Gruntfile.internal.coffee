@@ -12,6 +12,7 @@
 
 markdown = require("marked")
 semver = require("semver")
+
 module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-release"
   grunt.loadNpmTasks "grunt-conventional-changelog"
@@ -19,16 +20,17 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "marked"
 
   grunt.initConfig
-    pkg: grunt.file.readJSON("package.json")
+    pkg: grunt.file.readJSON("bower.json")
     changelog:
       options:
         dest: "CHANGELOG.md"
-        versionFile: "package.json"
+        versionFile: "bower.json"
 
     release:
       options:
         commitMessage: "<%= version %>"
         tagName: "v<%= version %>"
+        npm: false, # don't register to npm, only bower
         bump: false # we have our own bump
         file: "bower.json"
 

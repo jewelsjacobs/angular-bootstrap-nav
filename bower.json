@@ -1,0 +1,15 @@
+{
+  "author": {
+    "name": "https://github.com/rackerlabs/angular-bootstrap-nav/graphs/contributors"
+  },
+  "name": "angular-bootstrap-nav",
+  "version": "0.1.0",
+  "main": [
+    "angular-bootstrap-nav.js"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "angular": "~1.2.16"
+  }
+}
