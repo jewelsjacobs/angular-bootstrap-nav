@@ -1,3 +1,12 @@
+<a name="0.1.10"></a>
+### 0.1.10 (2014-04-14)
+
+
+#### Bug Fixes
+
+* **spec:** fix and remove test files  Changes to be committed: 	modified:   CHANGELOG.md 	r ([4af869d2](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/4af869d2f8117217c4a2b007dd9351919910da79))
+
+
 <a name="0.1.9"></a>
 ### 0.1.9 (2014-04-14)
 

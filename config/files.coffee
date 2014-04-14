@@ -8,3 +8,5 @@
 module.exports = (lineman) ->
   
   #Override file patterns here
+  ngtemplates:
+    dest: 'app/js/templates.js'
