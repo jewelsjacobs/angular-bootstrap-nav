@@ -1,9 +1,10 @@
-<a name="0.1.8"></a>
-### 0.1.8 (2014-04-14)
+<a name="0.1.9"></a>
+### 0.1.9 (2014-04-14)
 
 
-<a name="0.1.7"></a>
-### 0.1.7 (2014-04-14)
+#### Bug Fixes
+
+* **angular-bootstrap-nav:** added directive files Changes to be committed: 	new file:   .grunt/grunt-gh-page ([fbbc58f3](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/fbbc58f3d64ba396138135f02edd1fe074333198))
 
 
 <a name="0.1.7"></a>
@@ -13,10 +14,6 @@
 #### Bug Fixes
 
 * **Gruntfile.internal.coffee:** update bower.json  Changes to be committed: 	modified:   CHANGELOG.md 	modified: ([89af7459](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/89af7459a92e21951971390fac153bf314f48d8b))
-
-
-<a name="0.1.5"></a>
-### 0.1.5 (2014-04-14)
 
 
 <a name="0.1.3"></a>
