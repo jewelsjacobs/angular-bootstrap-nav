@@ -41,8 +41,7 @@ module.exports = (grunt) ->
       newVersion: newVersion
 
     # bumping package.json
-    options = @options(file: grunt.config("pkgFile") or "package.json")
-    config = setup(options.file, type)
+    config = setup("package.json", type)
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
     grunt.log.ok "package.json version bumped to " + config.newVersion
 
