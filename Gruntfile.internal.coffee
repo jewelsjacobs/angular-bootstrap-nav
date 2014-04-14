@@ -44,13 +44,13 @@ module.exports = (grunt) ->
     options = @options(file: grunt.config("pkgFile") or "package.json")
     config = setup(options.file, type)
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
+    grunt.log.ok "package.json version bumped to " + bower.newVersion
 
     # bumping bower.json
-    options = @options(file: "bower.json")
-    config = setup(options.file, type)
-    grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
+    bower = setup("bower.json", type)
+    grunt.file.write bower.file, JSON.stringify(bower.pkg, null, "  ") + "\n"
 
-    grunt.log.ok "Version bumped to " + config.newVersion
+    grunt.log.ok "bower.json version bumped to " + bower.newVersion
     return
 
   grunt.registerTask "stage", "git add files before running the release task", ->
