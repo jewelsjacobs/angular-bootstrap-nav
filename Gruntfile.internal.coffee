@@ -10,14 +10,11 @@
 
 "use strict"
 
-markdown = require("marked")
-semver = require("semver")
-
 module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-release"
   grunt.loadNpmTasks "grunt-conventional-changelog"
-  grunt.loadNpmTasks "semver"
-  grunt.loadNpmTasks "marked"
+
+  semver = require("semver")
 
   grunt.initConfig
     pkg: grunt.file.readJSON("bower.json")
