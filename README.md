@@ -61,5 +61,4 @@ To run the end-to-end tests:
 Please view the following documentation for contributing to this project.
 
  - [Contribution Guide](./CONTRIBUTING.md)
- - [Versioning Guide](./guides/versioning.md)
  - [Changelog](./CHANGELOG.md)
