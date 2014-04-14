@@ -44,7 +44,7 @@ module.exports = (grunt) ->
     options = @options(file: grunt.config("pkgFile") or "package.json")
     config = setup(options.file, type)
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
-    grunt.log.ok "package.json version bumped to " + bower.newVersion
+    grunt.log.ok "package.json version bumped to " + config.newVersion
 
     # bumping bower.json
     bower = setup("bower.json", type)
