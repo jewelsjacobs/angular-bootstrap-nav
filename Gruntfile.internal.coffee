@@ -14,8 +14,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-release"
   grunt.loadNpmTasks "grunt-conventional-changelog"
 
-  semver = require("semver")
-
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
     pkgFile: 'package.json'
@@ -36,17 +34,8 @@ module.exports = (grunt) ->
       options:
         files: ["CHANGELOG.md"]
 
-  grunt.registerTask "stage", "git add files before running the release task", ->
-    files = @options().files
-    grunt.util.spawn
-      cmd: (if process.platform is "win32" then "git.cmd" else "git")
-      args: ["add"].concat(files)
-    , grunt.task.current.async()
-
-  grunt.registerTask "default", [
-    "bump"
+  grunt.registerTask "release", [
     "changelog"
-    "stage"
     "release"
   ]
 

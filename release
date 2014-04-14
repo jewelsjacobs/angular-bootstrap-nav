@@ -5,4 +5,4 @@
 #
 clear
 echo "Releasing to bower registry"
-grunt release --no-write --gruntfile Gruntfile.internal.coffee
+grunt release --gruntfile Gruntfile.internal.coffee
