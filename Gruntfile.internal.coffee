@@ -17,7 +17,8 @@ module.exports = (grunt) ->
   semver = require("semver")
 
   grunt.initConfig
-    pkg: grunt.file.readJSON("bower.json")
+    pkg: grunt.file.readJSON 'package.json'
+    pkgFile: 'package.json'
     changelog:
       options:
         dest: "CHANGELOG.md"
@@ -28,24 +29,12 @@ module.exports = (grunt) ->
         commitMessage: "<%= version %>"
         tagName: "v<%= version %>"
         npm: false, # don't register to npm, only bower
-        bump: false # we have our own bump
+        bump: true # we have our own bump
         file: "bower.json"
 
     stage:
       options:
         files: ["CHANGELOG.md"]
-
-  grunt.registerTask "bump", "bump manifest version", (type) ->
-    setup = (file, type) ->
-      pkg = grunt.file.readJSON(file)
-      newVersion = pkg.version = semver.inc(pkg.version, type or "patch")
-      file: file
-      pkg: pkg
-      newVersion: newVersion
-    options = @options(file: grunt.config("pkgFile") or "package.json")
-    config = setup(options.file, type)
-    grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
-    grunt.log.ok "Version bumped to " + config.newVersion
 
   grunt.registerTask "stage", "git add files before running the release task", ->
     files = @options().files
