@@ -46,7 +46,7 @@ module.exports = (grunt) ->
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
 
     # bumping bower.json
-    bowerOptions = @options(file: bower.json)
+    bowerOptions = @options(file: "bower.json")
     config = setup(bowerOptions.file, type)
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
 
