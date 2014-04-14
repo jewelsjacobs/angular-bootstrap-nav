@@ -1,0 +1,8 @@
+#
+#!/bin/sh
+#
+# Run grunt commands releasing to bower registry
+#
+clear
+echo "Releasing to bower registry"
+grunt release --no-write --gruntfile Gruntfile.internal.coffee
