@@ -46,9 +46,9 @@ module.exports = (grunt) ->
     grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
 
     # bumping bower.json
-    bowerOptions = @bowerOptions(file: "bower.json")
-    bowerConfig = setup(bowerOptions.file, type)
-    grunt.file.write bowerConfig.file, JSON.stringify(bowerConfig.pkg, null, "  ") + "\n"
+    options = @options(file: "bower.json")
+    config = setup(options.file, type)
+    grunt.file.write config.file, JSON.stringify(config.pkg, null, "  ") + "\n"
 
     grunt.log.ok "Version bumped to " + config.newVersion
     return
