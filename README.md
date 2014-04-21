@@ -62,3 +62,4 @@ Please view the following documentation for contributing to this project.
 
  - [Contribution Guide](./CONTRIBUTING.md)
  - [Changelog](./CHANGELOG.md)
+ - [API](http://rackerlabs.github.io/angular-bootstrap-nav)

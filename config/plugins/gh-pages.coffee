@@ -4,5 +4,4 @@ module.exports = (lineman) ->
       "gh-pages":
         options:
           base: 'docs/'
-          add: true
         src: ['**']
