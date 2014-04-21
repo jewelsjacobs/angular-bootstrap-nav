@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html data-ng-app="webapp">
+
+    <head>
+        <title>angular nav</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                padding-top: 70px;
+            }
+        </style>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    </head>
+    
+    <body>
+        <div data-navbar title="testtitle"></div>
+        <div data-ng-view></div>
+    </body>
+    
+    
+    
+     <script>
+            angular.module('webapp', ['testnav', 'ngRoute', 'ui.bootstrap']);
+
+            angular.module('webapp').config(['$routeProvider', function ($routeProvider) {
+                "use strict";
+                $routeProvider.
+                    when('/route1', {navitem: true, controller: false, name: 'route1', template: '<p>i am route 1</p>'}).
+                    when('/route2', {navitem: true, controller: false, name: 'route2', template: '<p>i am route 2</p>'}).
+                    when('/route3', {navitem: true, controller: false, name: 'route3', template: '<p>i am route 3</p>'}).
+                    when('/route4', {template: '<p>i am route 4 and not in the navbar</p>'}).
+                    otherwise({redirectTo: '/home'});
+            }]);
+            
+            angular.module('testnav', []).directive('navbar', [function () {
+                "use strict";
+                return {
+                    restrict: 'AE',
+                    replace: true,
+                    transclude: false,
+                    scope: {
+                        title: '@'
+                    },
+                    controller: ['$scope', '$location', '$route', function ($scope, $location, $route) {
+                                
+                        $scope.navClass = function (page) {
+                            var currentRoute = $location.path().substring(1).split('/')[0];
+                            return page === currentRoute ? 'active' : '';
+                        };
+                                            
+                        $scope.routes = [];
+                        
+                        angular.forEach($route.routes, function (value, key) {
+                            if (value.navitem) {
+                                var routeitem = {};
+                                routeitem.path = value.originalPath;
+                                routeitem.name = value.name;
+                                routeitem.templateUrl = value.templateUrl;
+                                routeitem.controller = value.controller;
+                                $scope.routes.push(routeitem);
+                            }
+                        });
+                        $scope.isCollapsed = true;
+                    }],
+                    template:
+                        '<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">' +
+                            '<div class="navbar-header">' +
+                                '<button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">' +
+                                    '<span class="sr-only">Toggle navigation</span>' +
+                                    '<span class="icon-bar"></span>' +
+                                    '<span class="icon-bar"></span>' +
+                                    '<span class="icon-bar"></span>' +
+                                '</button>' +
+                                '<a id="Ludicbrand" class="navbar-brand" href="#/home">' +
+                                    '<span class="thin" ng-bind="title"></span>' +
+                                '</a>' +
+                            '</div>' +
+                            '<div class="collapse navbar-collapse" ng-class="!navCollapsed && \'in\'">' +
+                                '<ul class="nav navbar-nav">' +
+                                    '<li ng-repeat="route in routes" data-ng-class="navClass(\'{{route.name}}\')">' +
+                                        '<a ng-href="#{{route.path}}" ng-bind="route.name"></a>' +
+                                    '</li>' +
+                                '</ul>' +
+                            '</div>' +
+                        '</nav>'
+                };
+            }]);
+
+        </script>
+</html>
