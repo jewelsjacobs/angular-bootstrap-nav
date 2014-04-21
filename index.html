@@ -1,117 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Angular-bootstrap-nav by rackerlabs</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Angular-bootstrap-nav</h1>
-        <p>AngularJS (Angular) directive for Twitter&#39;s Bootstrap&#39;s Navbar component. Requires angular-ui-bootstrap and bootstrap css.  http://rackerlabs.github.io/angular-bootstrap-nav</p>
-
-        <p class="view"><a href="https://github.com/rackerlabs/angular-bootstrap-nav">View the Project on GitHub <small>rackerlabs/angular-bootstrap-nav</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/rackerlabs/angular-bootstrap-nav/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/rackerlabs/angular-bootstrap-nav/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/rackerlabs/angular-bootstrap-nav">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p><a href="https://travis-ci.org/rackerlabs/angular-bootstrap-nav"><img src="https://travis-ci.org/rackerlabs/angular-bootstrap-nav.svg" alt="Build Status"></a></p>
-
-<h1>
-<a name="angular-bootstrap-nav" class="anchor" href="#angular-bootstrap-nav"><span class="octicon octicon-link"></span></a>Angular Bootstrap Nav</h1>
-
-<p>AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component. Requires angular-ui-bootstrap and bootstrap css.</p>
-
-<p>Based on <a href="https://gist.github.com/fpv83/8704263">angular-bootstrap-nav.html gist</a>.</p>
-
-<h1>
-<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h1>
-
-<ol>
-<li>
-<p>Install bower:</p>
-
-<pre lang="shell"><code>$ [sudo] npm install bower -g
-</code></pre>
-</li>
-<li>
-<p>Install bower package:</p>
-
-<pre lang="shell"><code>$ bower install angular-ui-bootstrap
-</code></pre>
-</li>
-</ol><h1>
-<a name="build-instructions" class="anchor" href="#build-instructions"><span class="octicon octicon-link"></span></a>Build Instructions</h1>
-
-<ol>
-<li><code>git clone git@github.com:rackerlabs/angular-bootstrap-nav.git angular-bootstrap-nav</code></li>
-<li><code>cd angular-bootstrap-nav</code></li>
-<li><code>sudo npm install -g lineman</code></li>
-<li><code>npm install</code></li>
-<li><code>lineman run</code></li>
-<li>open your web browser to localhost:8000</li>
-</ol><h1>
-<a name="running-tests" class="anchor" href="#running-tests"><span class="octicon octicon-link"></span></a>Running Tests</h1>
-
-<p>For guidance on testing strategy, view <a href="http://www.github.com/davemo">@davemo</a>'s <a href="http://www.youtube.com/watch?v=UYVcY9EJcRs">Testing Strategies for Angular JS</a> screencast, and contains all the tests we wrote in the screencast and a few more!</p>
-
-<p>To run the unit tests:</p>
-
-<ol>
-<li>
-<code>lineman run</code> from 1 terminal window</li>
-<li>
-<code>lineman spec</code> from another terminal window, this will launch Testem and execute specs in Chrome</li>
-</ol><p>To run the end-to-end tests:</p>
-
-<ol>
-<li><code>npm install protractor</code></li>
-<li><code>brew install selenium-server-standalone</code></li>
-<li>Make sure you have chrome installed.</li>
-<li>
-<code>lineman run</code> from 1 terminal window</li>
-<li>
-<p><code>lineman grunt spec-e2e</code> from another terminal window</p>
-
-<p>Troubleshooting:</p>
-
-<p>If you see this error: Warning: there's no selenium server jar at the specified location,
-  you may need to change the selenium-server-standalone jar version in config/spec-e2e.js
-  to the actual you see in /usr/local/opt/selenium-server-standalone (brew users may have a libexec directory).</p>
-
-<p>If you see this error: Fatal error: The path to the driver executable must be set by the
-  webdriver.chrome.driver system property, you may need to download the chromedriver
-  (<a href="https://code.google.com/p/selenium/wiki/ChromeDriver">https://code.google.com/p/selenium/wiki/ChromeDriver</a>) and place it in /usr/local/bin (mac).</p>
-</li>
-</ol><h1>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h1>
-
-<p>Please view the following documentation for contributing to this project.</p>
-
-<ul>
-<li><a href="./CONTRIBUTING.md">Contribution Guide</a></li>
-<li><a href="./CHANGELOG.md">Changelog</a></li>
-</ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/rackerlabs">rackerlabs</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+<head>
+  <title>angular-bootstrap-nav.coffee</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
     
-  </body>
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>angular-bootstrap-nav.coffee</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span>(<span class="hljs-string">"bootstrap.navbar"</span>, []).directive <span class="hljs-string">"bootstrapNav"</span>, [<span class="hljs-function">-&gt;</span>
+  <span class="hljs-string">"use strict"</span>
+  <span class="hljs-attribute">restrict</span>: <span class="hljs-string">"AE"</span>
+  <span class="hljs-attribute">replace</span>: <span class="hljs-literal">true</span>
+  <span class="hljs-attribute">transclude</span>: <span class="hljs-literal">false</span>
+  <span class="hljs-attribute">scope</span>:
+    <span class="hljs-attribute">title</span>: <span class="hljs-string">"@"</span>
+
+  <span class="hljs-attribute">controller</span>: [
+    <span class="hljs-string">"$scope"</span>
+    <span class="hljs-string">"$location"</span>
+    <span class="hljs-string">"$route"</span>
+    <span class="hljs-function"><span class="hljs-params">($scope, $location, $route)</span> -&gt;</span>
+      $scope.<span class="hljs-function"><span class="hljs-title">navClass</span> = <span class="hljs-params">(page)</span> -&gt;</span>
+        currentRoute = $location.path().substring(<span class="hljs-number">1</span>).split(<span class="hljs-string">"/"</span>)[<span class="hljs-number">0</span>]
+        (<span class="hljs-keyword">if</span> page <span class="hljs-keyword">is</span> currentRoute <span class="hljs-keyword">then</span> <span class="hljs-string">"active"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">""</span>)
+
+      $scope.routes = []
+      angular.forEach $route.routes, <span class="hljs-function"><span class="hljs-params">(value, key)</span> -&gt;</span>
+        <span class="hljs-keyword">if</span> value.navitem
+          routeitem = {}
+          routeitem.path = value.originalPath
+          routeitem.name = value.name
+          routeitem.templateUrl = value.templateUrl
+          routeitem.controller = value.controller
+          $scope.routes.push routeitem
+        <span class="hljs-keyword">return</span>
+
+      $scope.isCollapsed = <span class="hljs-literal">true</span>
+  ]
+  <span class="hljs-attribute">templateUrl</span>: <span class="hljs-string">'angular-bootstrap-nav.html'</span>
+]</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
 </html>
