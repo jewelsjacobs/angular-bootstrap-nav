@@ -5,7 +5,7 @@
   "name": "angular-bootstrap-nav",
   "version": "0.1.13",
   "main": [
-    "angular-bootstrap-nav.js"
+    "dist/angular-bootstrap-nav.js"
   ],
   "dependencies": {
     "angular-route": "~1.2.16",
