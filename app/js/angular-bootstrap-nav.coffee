@@ -5,6 +5,7 @@ angular.module("bootstrap.navbar", []).directive "bootstrapNav", [->
   transclude: false
   scope:
     title: "@"
+    logo: '=?'
 
   controller: [
     "$scope"

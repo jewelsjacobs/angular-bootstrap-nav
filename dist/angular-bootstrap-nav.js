@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.11
+/* angular-bootstrap-nav - 0.1.13
  * 
  * 
  */
@@ -11,7 +11,8 @@
         replace: true,
         transclude: false,
         scope: {
-          title: "@"
+          title: "@",
+          logo: '=?'
         },
         controller: [
           "$scope", "$location", "$route", function($scope, $location, $route) {
@@ -57,6 +58,7 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "      <span class=\"icon-bar\"></span>\n" +
     "      <span class=\"icon-bar\"></span>\n" +
     "    </button>\n" +
+    "    <div ng-if=\"logo\" class=\"pull-left\" ng-bind-html=\"logo\"></div>\n" +
     "    <a id=\"Ludicbrand\" class=\"navbar-brand\" href=\"#/home\">\n" +
     "      <span class=\"thin\" ng-bind=\"title\"></span>\n" +
     "    </a>\n" +
