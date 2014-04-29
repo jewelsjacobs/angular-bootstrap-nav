@@ -19,7 +19,7 @@ Example [plunkr](http://plnkr.co/edit/SMSq2R?p=info)
 2. Install bower package:
 
     ```shell
-    $ bower install angular-ui-bootstrap
+    $ bower install angular-bootstrap-nav
     ```
 
 # Contributing
