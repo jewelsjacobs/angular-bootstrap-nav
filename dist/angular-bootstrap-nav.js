@@ -1,5 +1,5 @@
-/* angular-bootstrap-nav - 0.1.15
- * 
+/* angular-bootstrap-nav - 0.1.14
+ *
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
 (function() {
@@ -10,7 +10,6 @@
         restrict: "AE",
         replace: true,
         transclude: false,
-        require: ['^ui.bootstrap.typeahead', '^'],
         scope: {
           title: "@",
           logo: '=?'
