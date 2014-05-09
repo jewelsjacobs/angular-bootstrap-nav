@@ -1,6 +1,6 @@
-/* angular-bootstrap-nav - 0.1.13
+/* angular-bootstrap-nav - 0.1.14
  * 
- * 
+ * https://github.com/rackerlabs/angular-bootstrap-nav
  */
 (function() {
   angular.module("bootstrap.navbar", []).directive("bootstrapNav", [
@@ -10,6 +10,7 @@
         restrict: "AE",
         replace: true,
         transclude: false,
+        require: ['^ui.bootstrap.typeahead', '^'],
         scope: {
           title: "@",
           logo: '=?'
@@ -50,7 +51,7 @@
 angular.module("bootstrap.navbar").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("angular-bootstrap-nav.html",
-    "<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n" +
+    "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n" +
     "  <div class=\"navbar-header\">\n" +
     "    <button type=\"button\" class=\"navbar-toggle\" ng-init=\"navCollapsed = true\" ng-click=\"navCollapsed = !navCollapsed\">\n" +
     "      <span class=\"sr-only\">Toggle navigation</span>\n" +

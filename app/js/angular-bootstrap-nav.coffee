@@ -3,6 +3,7 @@ angular.module("bootstrap.navbar", []).directive "bootstrapNav", [->
   restrict: "AE"
   replace: true
   transclude: false
+  require: ['^ui.bootstrap.typeahead', '^']
   scope:
     title: "@"
     logo: '=?'
