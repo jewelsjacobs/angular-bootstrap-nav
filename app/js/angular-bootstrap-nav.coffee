@@ -6,6 +6,7 @@ angular.module("bootstrap.navbar", []).directive "bootstrapNav", [->
   scope:
     title: "@"
     logo: '=?'
+    search: '=?'
 
   controller: [
     "$scope"
@@ -28,6 +29,10 @@ angular.module("bootstrap.navbar", []).directive "bootstrapNav", [->
         return
 
       $scope.isCollapsed = true
+
+      console.log $scope
+
+      return $scope
   ]
   templateUrl: 'angular-bootstrap-nav.html'
 ]

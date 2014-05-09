@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.13
+/* angular-bootstrap-nav - 0.1.14
  * 
  * 
  */
@@ -12,7 +12,8 @@
         transclude: false,
         scope: {
           title: "@",
-          logo: '=?'
+          logo: '=?',
+          search: '=?'
         },
         controller: [
           "$scope", "$location", "$route", function($scope, $location, $route) {
@@ -37,7 +38,9 @@
                 $scope.routes.push(routeitem);
               }
             });
-            return $scope.isCollapsed = true;
+            $scope.isCollapsed = true;
+            console.log($scope);
+            return $scope;
           }
         ],
         templateUrl: 'angular-bootstrap-nav.html'
@@ -69,7 +72,25 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "        <a ng-href=\"#{{route.path}}\" ng-bind=\"route.name\"></a>\n" +
     "      </li>\n" +
     "    </ul>\n" +
-    "  </div>\n" +
+    "    <form ng-if=\"search\" class=\"navbar-form navbar-left\" role=\"search\">\n" +
+    "      <div ng-if=\"search\" class=\"form-group navbar-left\">\n" +
+    "        <input type=\"text\" ng-model=\"selected\" placeholder=\"{{ search.placeholder }}\" typeahead=\"{{ search.typeahead }}\" typeahead-template-url=\"{{ search.template }}\" class=\"form-control\">\n" +
+    "        <!-- Single button -->\n" +
+    "        <div class=\"btn-group\" dropdown>\n" +
+    "          <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\n" +
+    "            {{ search.placeholder }} <span class=\"caret\"></span>\n" +
+    "          </button>\n" +
+    "          <ul class=\"dropdown-menu\" role=\"menu\">\n" +
+    "            <li ng-repeat=\"choice in search.button.choices\">\n" +
+    "              <a ng-click=\"current = choice\">\n" +
+    "                {{ choice }}\n" +
+    "              </a>\n" +
+    "            </li>\n" +
+    "          </ul>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "    </form>\n" +
+    "   </div>\n" +
     "</nav>\n"
   );
 
