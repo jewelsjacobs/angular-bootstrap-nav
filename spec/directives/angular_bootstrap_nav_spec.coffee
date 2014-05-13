@@ -40,7 +40,6 @@ describe "directive bootstrap.navbar", ->
       "<bootstrap-nav logo=\"logo\" title=\"{{ title }}\""
       "search=\"searchOptions\">"
       "</bootstrap-nav>"].join("\n"))(@scope)
-    @scope.$apply()
 
     # global elements
     @buttonInputEl = (elm) ->
@@ -49,6 +48,7 @@ describe "directive bootstrap.navbar", ->
       elm[0].querySelector('.dropdown-menu')
     @searchInputEl = (elm) ->
       elm[0].querySelector('#search')
+    @scope.$apply()
 
     angular.forEach(choicesEls(@elm), (choice) ->
       @.push choice.querySelector('a')
@@ -100,24 +100,19 @@ describe "directive bootstrap.navbar", ->
       #default choice
       expect(@scope.searchOptions.button.choice).toBe 'choice1'
 
-      @choices[1].click()
+      clickElement @choices[1]
       expect(@scope.searchOptions.button.choice).toBe 'choice2'
 
-      @choices[0].click()
+      clickElement @choices[0]
       expect(@scope.searchOptions.button.choice).toBe 'choice1'
 
-      @choices[1].click()
+      clickElement @choices[1]
       expect(@scope.searchOptions.button.choice).toBe 'choice2'
 
-#  describe "search input", ->
-#    it "should update the input value property when value is entered", ->
-#      searchInput = @searchInputEl(@elm)
-#      searchInput.value = 'blah'
-#      console.log searchInput.value
-#      expect(@scope.searchOptions.input.value).toBe 'blah'
-#      expect(@scope.searchOptions.input.value).toNotBe 'notBlah'
-#
-#      searchInput.value = 'hey'
-#      expect(@scope.searchOptions.input.value).toBe 'hey'
+
+  describe "search function", ->
+    it "should execute when dropdown choice is clicked", ->
+      clickElement @choices[1]
+      expect(@scope.searchOptions.button.onClick()).toBe 2
 
 
