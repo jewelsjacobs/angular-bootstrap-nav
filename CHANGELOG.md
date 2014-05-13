@@ -7,6 +7,21 @@
 * **logo:**
   * add logo markup ([10e8903c](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/10e8903c8dddd38ab4b7b1668457936cd8d60e45))
   * add logo markup ([1254de31](http://github.rackspace.com/rackerlabs/angular-bootstrap-nav/commit/1254de311eb0174525de289dd23beac704e125f5))
+=======
+<a name="0.1.16"></a>
+### 0.1.16 (2014-05-09)
+
+
+<a name="0.1.15"></a>
+### 0.1.15 (2014-05-09)
+
+
+<a name="0.1.14"></a>
+### 0.1.14 (2014-05-09)
+
+
+<a name="0.1.13"></a>
+### 0.1.13 (2014-05-09)
 
 
 <a name="0.1.12"></a>
