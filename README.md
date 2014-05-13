@@ -4,9 +4,10 @@
 
 AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component. Requires angular-ui-bootstrap and bootstrap css.
 
-Based on [angular-bootstrap-nav.html gist](https://gist.github.com/fpv83/8704263).
+Based on [angular-bootstrap-nav.html gist](https://gist.github.com/fpv83/8704263) with a few additions.
 
-Example [plunkr](http://plnkr.co/edit/SMSq2R?p=info)
+Allows the option to add a logo and a search input with an action dropdown button.
+See [plunkr](http://plnkr.co/edit/lw9Icp) for details.
 
 # Install
 
@@ -28,4 +29,4 @@ Please view the following documentation for contributing to this project.
 
  - [Contribution Guide](./CONTRIBUTING.md)
  - [Changelog](./CHANGELOG.md)
- - [API](http://rackerlabs.github.io/angular-bootstrap-nav/angular-bootstrap-nav.html)
+ - [API](./docs/angular-bootstrap-nav.html)
