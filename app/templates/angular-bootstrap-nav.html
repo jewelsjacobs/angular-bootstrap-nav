@@ -6,8 +6,8 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <div ng-if="logo" class="pull-left" ng-bind-html="logo"></div>
-    <a id="Ludicbrand" class="navbar-brand" href="#/home">
+    <div ng-if="logo" class="logo pull-left" ng-bind-html="logo"></div>
+    <a id="Ludicbrand" class="navbar-brand" href="/">
       <span class="thin" ng-bind="title"></span>
     </a>
   </div>
@@ -18,16 +18,16 @@
       </li>
     </ul>
     <form ng-if="search" class="navbar-form navbar-left" role="search">
-      <div ng-if="search" class="form-group navbar-left">
-        <input type="text" ng-model="selected" placeholder="{{ search.placeholder }}" typeahead="{{ search.typeahead }}" typeahead-template-url="{{ search.template }}" class="form-control">
-        <!-- Single button -->
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="search.input.value" placeholder="{{ search.input.placeholder }}">
+                <!-- Single button -->
         <div class="btn-group" dropdown>
           <button type="button" class="btn btn-primary dropdown-toggle">
-            {{ search.placeholder }} <span class="caret"></span>
+            {{ search.button.placeholder }} <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
             <li ng-repeat="choice in search.button.choices">
-              <a ng-click="current = choice">
+              <a style="cursor: pointer;" ng-click="search.button.choice = choice; search.button.onClick()">
                 {{ choice }}
               </a>
             </li>

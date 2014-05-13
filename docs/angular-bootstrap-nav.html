@@ -30,44 +30,41 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span>(<span class="hljs-string">"bootstrap.navbar"</span>, []).directive <span class="hljs-string">"bootstrapNav"</span>, [<span class="hljs-function">-&gt;</span>
+            <div class="content"><div class='highlight'><pre>angular.<span class="hljs-built_in">module</span>(<span class="hljs-string">"bootstrap.navbar"</span>, [<span class="hljs-string">'ngRoute'</span>, <span class="hljs-string">'ngSanitize'</span>])
+.controller(<span class="hljs-string">'NavCtr'</span>, [
+  <span class="hljs-string">"$scope"</span>
+  <span class="hljs-string">"$location"</span>
+  <span class="hljs-string">"$route"</span>
+  <span class="hljs-function"><span class="hljs-title">NavCtr</span> = <span class="hljs-params">($scope, $location, $route)</span> -&gt;</span>
+
+    $scope.<span class="hljs-function"><span class="hljs-title">navClass</span> = <span class="hljs-params">(page)</span> -&gt;</span>
+      currentRoute = $location.path().substring(<span class="hljs-number">1</span>).split(<span class="hljs-string">"/"</span>)[<span class="hljs-number">0</span>]
+      (<span class="hljs-keyword">if</span> page <span class="hljs-keyword">is</span> currentRoute <span class="hljs-keyword">then</span> <span class="hljs-string">"active"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">""</span>)
+
+    $scope.routes = []
+    angular.forEach $route.routes, <span class="hljs-function"><span class="hljs-params">(value, key)</span> -&gt;</span>
+      <span class="hljs-keyword">if</span> value.navitem
+        routeitem = {}
+        routeitem.path = value.originalPath
+        routeitem.name = value.name
+        routeitem.templateUrl = value.templateUrl
+        routeitem.controller = value.controller
+        $scope.routes.push routeitem
+
+    $scope.isCollapsed = <span class="hljs-literal">true</span>
+])
+.directive(<span class="hljs-string">"bootstrapNav"</span>,<span class="hljs-function"> -&gt;</span>
   <span class="hljs-string">"use strict"</span>
   <span class="hljs-attribute">restrict</span>: <span class="hljs-string">"AE"</span>
   <span class="hljs-attribute">replace</span>: <span class="hljs-literal">true</span>
   <span class="hljs-attribute">transclude</span>: <span class="hljs-literal">false</span>
   <span class="hljs-attribute">scope</span>:
-    <span class="hljs-attribute">title</span>: <span class="hljs-string">"@"</span>
-    <span class="hljs-attribute">logo</span>: <span class="hljs-string">'=?'</span>
-    <span class="hljs-attribute">search</span>: <span class="hljs-string">'=?'</span>
-
-  <span class="hljs-attribute">controller</span>: [
-    <span class="hljs-string">"$scope"</span>
-    <span class="hljs-string">"$location"</span>
-    <span class="hljs-string">"$route"</span>
-    <span class="hljs-function"><span class="hljs-params">($scope, $location, $route)</span> -&gt;</span>
-      $scope.<span class="hljs-function"><span class="hljs-title">navClass</span> = <span class="hljs-params">(page)</span> -&gt;</span>
-        currentRoute = $location.path().substring(<span class="hljs-number">1</span>).split(<span class="hljs-string">"/"</span>)[<span class="hljs-number">0</span>]
-        (<span class="hljs-keyword">if</span> page <span class="hljs-keyword">is</span> currentRoute <span class="hljs-keyword">then</span> <span class="hljs-string">"active"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">""</span>)
-
-      $scope.routes = []
-      angular.forEach $route.routes, <span class="hljs-function"><span class="hljs-params">(value, key)</span> -&gt;</span>
-        <span class="hljs-keyword">if</span> value.navitem
-          routeitem = {}
-          routeitem.path = value.originalPath
-          routeitem.name = value.name
-          routeitem.templateUrl = value.templateUrl
-          routeitem.controller = value.controller
-          $scope.routes.push routeitem
-        <span class="hljs-keyword">return</span>
-
-      $scope.isCollapsed = <span class="hljs-literal">true</span>
-
-      <span class="hljs-built_in">console</span>.log $scope
-
-      <span class="hljs-keyword">return</span> $scope
-  ]
+    <span class="hljs-string">'title'</span>: <span class="hljs-string">"@"</span>
+    <span class="hljs-string">'logo'</span>: <span class="hljs-string">'=?'</span>
+    <span class="hljs-string">'search'</span>: <span class="hljs-string">'=?'</span>
+  <span class="hljs-attribute">controller</span>: <span class="hljs-string">'NavCtr'</span>
   <span class="hljs-attribute">templateUrl</span>: <span class="hljs-string">'angular-bootstrap-nav.html'</span>
-]</pre></div></div>
+)</pre></div></div>
             
         </li>
         
