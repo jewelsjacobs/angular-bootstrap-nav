@@ -26,7 +26,6 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
   restrict: "AE"
   replace: true
   transclude: false
-  require: ['^ui.bootstrap.typeahead', '^']
   scope:
     'title': "@"
     'logo': '=?'
