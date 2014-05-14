@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.17
+/* angular-bootstrap-nav - 0.1.18
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -37,7 +37,7 @@
       replace: true,
       transclude: false,
       scope: {
-        'title': "@",
+        'title': "@?",
         'logo': '=?',
         'search': '=?'
       },

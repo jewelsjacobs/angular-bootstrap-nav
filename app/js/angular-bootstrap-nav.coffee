@@ -27,7 +27,7 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
   replace: true
   transclude: false
   scope:
-    'title': "@"
+    'title': "@?"
     'logo': '=?'
     'search': '=?'
   controller: 'NavCtr'
