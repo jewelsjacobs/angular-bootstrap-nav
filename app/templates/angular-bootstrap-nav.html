@@ -17,7 +17,7 @@
         <a ng-href="#{{route.path}}" ng-bind="route.name"></a>
       </li>
     </ul>
-    <form ng-if="searchInput" class="navbar-form navbar-left" role="search">
+    <form ng-if="searchInput" class="navbar-form navbar-right" role="search">
       <div class="form-group">
         <input id="search" type="text" class="form-control" ng-model="searchInput.value" placeholder="{{ searchInput.placeholder }}">
         <!-- Select -->
