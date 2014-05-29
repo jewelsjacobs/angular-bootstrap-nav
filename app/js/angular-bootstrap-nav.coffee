@@ -10,7 +10,7 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
       (if page is currentRoute then "active" else "")
 
     $scope.routes = []
-    angular.forEach $route.routes, (value, key) ->
+    angular.forEach $route.routes, (value) ->
       if value.navitem
         routeitem = {}
         routeitem.path = value.originalPath
@@ -27,9 +27,10 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
   replace: true
   transclude: false
   scope:
-    'title': "@?"
-    'logo': '=?'
-    'search': '=?'
+    'title': "@?",
+    'logo': '=?',
+    'searchInput': '=?',
+    'searchSelect': '=?'
   controller: 'NavCtr'
   templateUrl: 'angular-bootstrap-nav.html'
 )

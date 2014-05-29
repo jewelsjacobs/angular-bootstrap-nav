@@ -17,22 +17,13 @@
         <a ng-href="#{{route.path}}" ng-bind="route.name"></a>
       </li>
     </ul>
-    <form ng-if="search" class="navbar-form navbar-left" role="search">
+    <form ng-if="searchInput" class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input id="search" type="text" class="form-control" ng-model="search.input.value" placeholder="{{ search.input.placeholder }}">
-                <!-- Single button -->
-        <div class="btn-group" dropdown>
-          <button type="button" class="btn btn-primary dropdown-toggle">
-            {{ search.button.placeholder }} <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li ng-repeat="choice in search.button.choices">
-              <a style="cursor: pointer;" ng-click="search.button.choice = choice; search.button.onClick()">
-                {{ choice }}
-              </a>
-            </li>
-          </ul>
-        </div>
+        <input id="search" type="text" class="form-control" ng-model="searchInput.value" placeholder="{{ searchInput.placeholder }}">
+        <!-- Select -->
+        <select ng-if="searchSelect" ng-model="searchSelect.value" class="form-control" ng-options="option for option in searchSelect.options">
+          <option value="">{{ searchSelect.default }}</option>
+        </select>
       </div>
     </form>
    </div>

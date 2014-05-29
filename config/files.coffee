@@ -11,10 +11,11 @@ module.exports = (lineman) ->
   js:
     specHelpers: [
       # bower app dependencies
-      "bower_components/angular/angular.js"
-      "bower_components/angular-route/angular-route.js"
-      "bower_components/angular-sanitize/angular-sanitize.js"
-      "bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"
+      "vendor/bower/angular/angular.js"
+      "vendor/bower/angular-route/angular-route.js"
+      "vendor/bower/angular-sanitize/angular-sanitize.js"
+      "vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"
+      "vendor/bower/jasmine-jquery/lib/jasmine-jquery.js"
       "spec/helpers/**/*.js"
       # app code
       "generated/js/app.js"
