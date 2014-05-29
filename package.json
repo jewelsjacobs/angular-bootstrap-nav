@@ -2,7 +2,7 @@
   "author": "https://github.com/rackerlabs/angular-bootstrap-nav/graphs/contributors",
   "name": "angular-bootstrap-nav",
   "title": "AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component.",
-  "version": "0.1.18",
+  "version": "0.1.21",
   "private": true,
   "repository": {
     "type": "git",
@@ -11,19 +11,18 @@
   "devDependencies": {
     "grunt-release": "^0.7.0",
     "grunt-conventional-changelog": "^1.1.0",
-    "semver": "^2.2.1",
-    "protractor": ">=0.8.0",
-    "jasmine-given": "~2.1.0",
-    "lineman": ">= 0.28.0",
-    "coffee-script": "~1.6.3",
-    "grunt": "^0.4.4",
+    "semver": "^2.3.0",
+    "protractor": ">=0.23.1",
+    "jasmine-given": "~2.6.2",
+    "lineman": ">=0.30.0",
+    "coffee-script": "~1.7.1",
+    "grunt": "^0.4.5",
     "marked": "^0.3.2",
     "load-grunt-tasks": "^0.4.0",
-    "lineman-lib": "0.0.1",
+    "lineman-lib": "0.2.0",
     "lineman-angular": "^0.2.0",
-    "grunt-coffeelint": "0.0.10",
-    "lineman-coffeelint": "^0.1.1",
-    "lineman-docs": "0.0.6"
+    "lineman-docs": "0.0.6",
+    "lineman-coffeelint": "^0.1.1"
   },
   "scripts": {
     "start": "lineman run",

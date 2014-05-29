@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.18
+/* angular-bootstrap-nav - 0.1.21
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -17,7 +17,7 @@
         }
       };
       $scope.routes = [];
-      angular.forEach($route.routes, function(value, key) {
+      angular.forEach($route.routes, function(value) {
         var routeitem;
         if (value.navitem) {
           routeitem = {};
@@ -39,7 +39,8 @@
       scope: {
         'title': "@?",
         'logo': '=?',
-        'search': '=?'
+        'searchInput': '=?',
+        'searchSelect': '=?'
       },
       controller: 'NavCtr',
       templateUrl: 'angular-bootstrap-nav.html'
@@ -70,22 +71,13 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "        <a ng-href=\"#{{route.path}}\" ng-bind=\"route.name\"></a>\n" +
     "      </li>\n" +
     "    </ul>\n" +
-    "    <form ng-if=\"search\" class=\"navbar-form navbar-left\" role=\"search\">\n" +
+    "    <form ng-if=\"searchInput\" class=\"navbar-form navbar-right\" role=\"search\">\n" +
     "      <div class=\"form-group\">\n" +
-    "        <input id=\"search\" type=\"text\" class=\"form-control\" ng-model=\"search.input.value\" placeholder=\"{{ search.input.placeholder }}\">\n" +
-    "                <!-- Single button -->\n" +
-    "        <div class=\"btn-group\" dropdown>\n" +
-    "          <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\n" +
-    "            {{ search.button.placeholder }} <span class=\"caret\"></span>\n" +
-    "          </button>\n" +
-    "          <ul class=\"dropdown-menu\" role=\"menu\">\n" +
-    "            <li ng-repeat=\"choice in search.button.choices\">\n" +
-    "              <a style=\"cursor: pointer;\" ng-click=\"search.button.choice = choice; search.button.onClick()\">\n" +
-    "                {{ choice }}\n" +
-    "              </a>\n" +
-    "            </li>\n" +
-    "          </ul>\n" +
-    "        </div>\n" +
+    "        <input id=\"search\" type=\"text\" class=\"form-control\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
+    "        <!-- Select -->\n" +
+    "        <select ng-if=\"searchSelect\" ng-model=\"searchSelect.value\" class=\"form-control\" ng-options=\"option for option in searchSelect.options\">\n" +
+    "          <option value=\"\">{{ searchSelect.default }}</option>\n" +
+    "        </select>\n" +
     "      </div>\n" +
     "    </form>\n" +
     "   </div>\n" +

@@ -1,7 +1,7 @@
 {
-  "name": "angular-bootstrap-nav",
-  "version": "0.1.21",
-  "main": "dist/angular-bootstrap-nav.js",
+  "name": "<%= pkg.name %>",
+  "version": "<%= pkg.version %>",
+  "main": "<%= files.js.uncompressedDist %>",
   "ignore": [
     "app",
     "config",
