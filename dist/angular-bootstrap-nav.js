@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.21
+/* angular-bootstrap-nav - 0.1.22
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -71,7 +71,7 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "        <a ng-href=\"#{{route.path}}\" ng-bind=\"route.name\"></a>\n" +
     "      </li>\n" +
     "    </ul>\n" +
-    "    <form ng-if=\"searchInput\" class=\"navbar-form navbar-right\" role=\"search\">\n" +
+    "    <form ng-if=\"searchInput\" class=\"navbar-form navbar-left\" role=\"search\">\n" +
     "      <div class=\"form-group\">\n" +
     "        <input id=\"search\" type=\"text\" class=\"form-control\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
     "        <!-- Select -->\n" +
