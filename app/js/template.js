@@ -24,7 +24,7 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "      <div class=\"form-group\">\n" +
     "        <input id=\"search\" type=\"text\" class=\"form-control\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
     "        <!-- Select -->\n" +
-    "        <select ng-if=\"searchSelect\" ng-model=\"searchSelect.value\" class=\"form-control\" ng-options=\"option for option in searchSelect.options\">\n" +
+    "        <select ng-if=\"searchSelect\" ng-model=\"searchSelect.choice\" class=\"form-control\" ng-options=\"option.label for option in searchSelect.options\">\n" +
     "          <option value=\"\">{{ searchSelect.default }}</option>\n" +
     "        </select>\n" +
     "      </div>\n" +
