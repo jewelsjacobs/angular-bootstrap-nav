@@ -19,6 +19,12 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
         routeitem.controller = value.controller
         $scope.routes.push routeitem
 
+      $scope.type = (type) ->
+        if type != undefined
+          "select"
+        else
+          "button"
+
     $scope.isCollapsed = true
 ])
 .directive("bootstrapNav", ->
@@ -31,6 +37,7 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
     'logo': '=?',
     'searchInput': '=?',
     'searchSelect': '=?'
+    'searchButton': '=?'
   controller: 'NavCtr'
   templateUrl: 'angular-bootstrap-nav.html'
 )

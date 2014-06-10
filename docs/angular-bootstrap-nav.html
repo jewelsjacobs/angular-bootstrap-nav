@@ -51,6 +51,12 @@
         routeitem.controller = value.controller
         $scope.routes.push routeitem
 
+      $scope.<span class="hljs-function"><span class="hljs-title">type</span> = <span class="hljs-params">(type)</span> -&gt;</span>
+        <span class="hljs-keyword">if</span> type != <span class="hljs-literal">undefined</span>
+          <span class="hljs-string">"select"</span>
+        <span class="hljs-keyword">else</span>
+          <span class="hljs-string">"button"</span>
+
     $scope.isCollapsed = <span class="hljs-literal">true</span>
 ])
 .directive(<span class="hljs-string">"bootstrapNav"</span>,<span class="hljs-function"> -&gt;</span>
@@ -63,6 +69,7 @@
     <span class="hljs-string">'logo'</span>: <span class="hljs-string">'=?'</span>,
     <span class="hljs-string">'searchInput'</span>: <span class="hljs-string">'=?'</span>,
     <span class="hljs-string">'searchSelect'</span>: <span class="hljs-string">'=?'</span>
+    <span class="hljs-string">'searchButton'</span>: <span class="hljs-string">'=?'</span>
   <span class="hljs-attribute">controller</span>: <span class="hljs-string">'NavCtr'</span>
   <span class="hljs-attribute">templateUrl</span>: <span class="hljs-string">'angular-bootstrap-nav.html'</span>
 )</pre></div></div>

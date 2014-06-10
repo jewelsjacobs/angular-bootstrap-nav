@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.23
+/* angular-bootstrap-nav - 0.1.24
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -25,8 +25,15 @@
           routeitem.name = value.name;
           routeitem.templateUrl = value.templateUrl;
           routeitem.controller = value.controller;
-          return $scope.routes.push(routeitem);
+          $scope.routes.push(routeitem);
         }
+        return $scope.type = function(type) {
+          if (type !== void 0) {
+            return "select";
+          } else {
+            return "button";
+          }
+        };
       });
       return $scope.isCollapsed = true;
     }
@@ -40,7 +47,8 @@
         'title': "@?",
         'logo': '=?',
         'searchInput': '=?',
-        'searchSelect': '=?'
+        'searchSelect': '=?',
+        'searchButton': '=?'
       },
       controller: 'NavCtr',
       templateUrl: 'angular-bootstrap-nav.html'
@@ -72,12 +80,17 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "      </li>\n" +
     "    </ul>\n" +
     "    <form ng-if=\"searchInput\" class=\"navbar-form navbar-right\" role=\"search\">\n" +
-    "      <div class=\"form-group\">\n" +
-    "        <input id=\"search\" type=\"text\" class=\"form-control\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
-    "        <!-- Select -->\n" +
-    "        <select ng-if=\"searchSelect\" ng-model=\"searchSelect.choice\" class=\"form-control\" ng-options=\"option.label for option in searchSelect.options\">\n" +
+    "      <div class=\"form-group\" ng-switch=\"type(searchSelect)\">\n" +
+    "        <input ng-switch-when=\"select\" type=\"text\" class=\"form-control\" id=\"search\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
+    "        <select ng-switch-when=\"select\" ng-model=\"searchSelect.choice\" class=\"form-control\" ng-options=\"option.label for option in searchSelect.options\">\n" +
     "          <option value=\"\">{{ searchSelect.default }}</option>\n" +
     "        </select>\n" +
+    "        <div class=\"input-group\" style=\"max-width: 250px;\"ng-switch-when=\"button\">\n" +
+    "          <input type=\"text\" class=\"form-control\" id=\"search\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
+    "          <span class=\"input-group-btn\">\n" +
+    "            <button class=\"btn btn-default\" type=\"button\" ng-click=\"searchButton.submit()\">{{ searchButton.placeholder || 'Search' }}</button>\n" +
+    "          </span>\n" +
+    "        </div>\n" +
     "      </div>\n" +
     "    </form>\n" +
     "   </div>\n" +
