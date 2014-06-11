@@ -14,11 +14,8 @@ semver = require("semver")
 module.exports = (grunt) ->
   require("load-grunt-tasks") grunt
   grunt.initConfig
-    pkg: grunt.file.readJSON("package.json")
-    changelog:
-      options:
-        dest: "CHANGELOG.md"
-        versionFile: "package.json"
+    pkg: grunt.file.readJSON 'package.json'
+    pkgFile: 'package.json'
 
     release:
       options:
