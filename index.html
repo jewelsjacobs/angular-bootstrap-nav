@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Angular-bootstrap-nav : AngularJS (Angular) directive for Twitter&#39;s Bootstrap&#39;s Navbar component. Requires angular-ui-bootstrap and bootstrap css.  http://rackerlabs.github.io/angular-bootstrap-nav" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <title>Angular-bootstrap-nav</title>
+    <title>Angular-bootstrap-nav by rackerlabs</title>
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/rackerlabs/angular-bootstrap-nav">View on GitHub</a>
+    <header>
+      <div class="container">
+        <h1>Angular-bootstrap-nav</h1>
+        <h2>AngularJS (Angular) directive for Twitter&#39;s Bootstrap&#39;s Navbar component. Requires angular-ui-bootstrap and bootstrap css.  http://rackerlabs.github.io/angular-bootstrap-nav</h2>
 
-          <h1 id="project_title">Angular-bootstrap-nav</h1>
-          <h2 id="project_tagline">AngularJS (Angular) directive for Twitter&#39;s Bootstrap&#39;s Navbar component. Requires angular-ui-bootstrap and bootstrap css.  http://rackerlabs.github.io/angular-bootstrap-nav</h2>
+        <section id="downloads">
+          <a href="https://github.com/rackerlabs/angular-bootstrap-nav/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/rackerlabs/angular-bootstrap-nav/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/rackerlabs/angular-bootstrap-nav" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/rackerlabs/angular-bootstrap-nav/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/rackerlabs/angular-bootstrap-nav/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+    <div class="container">
+      <section id="main_content">
         <p><a href="https://travis-ci.org/rackerlabs/angular-bootstrap-nav"><img src="https://travis-ci.org/rackerlabs/angular-bootstrap-nav.svg" alt="Build Status"></a></p>
 
 <h1>
 <a name="angular-bootstrap-nav" class="anchor" href="#angular-bootstrap-nav"><span class="octicon octicon-link"></span></a>Angular Bootstrap Nav</h1>
 
-<p>AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component. Requires angular-ui-bootstrap and bootstrap css.</p>
-
-<p>Based on <a href="https://gist.github.com/fpv83/8704263">angular-bootstrap-nav.html gist</a> with a few additions.</p>
-
-<p>Allows the option to add a logo and a search input with an action dropdown button.
-See <a href="http://plnkr.co/edit/JfbDMH">plunkr</a> for details.</p>
+<p>AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component. Requires angular-ui-bootstrap and bootstrap css.
+See <a href="http://plnkr.co/edit/PXabcU">example plunkr</a>.</p>
 
 <h1>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Links created from routes</li>
+<li>Optional logo markup</li>
+<li>Optional search input with optional submit button or select input</li>
+</ul><h1>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h1>
 
 <ol>
@@ -60,6 +60,77 @@ See <a href="http://plnkr.co/edit/JfbDMH">plunkr</a> for details.</p>
 </code></pre>
 </li>
 </ol><h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<h2>
+<a name="add-directive-web-component" class="anchor" href="#add-directive-web-component"><span class="octicon octicon-link"></span></a>Add directive web component</h2>
+
+<div class="highlight highlight-html"><pre><span class="c">&lt;!-- Just logo --&gt;</span>
+<span class="nt">&lt;bootstrap-nav</span> <span class="na">logo=</span><span class="s">"&lt;img src='somelogo.png'/&gt;"</span><span class="nt">&gt;&lt;/bootstrap-nav&gt;</span>
+<span class="c">&lt;!-- Logo + title --&gt;</span>
+<span class="nt">&lt;bootstrap-nav</span> <span class="na">logo=</span><span class="s">"&lt;img src='somelogo.png'/&gt;"</span> <span class="na">title=</span><span class="s">"Some Title"</span><span class="nt">&gt;&lt;/bootstrap-nav&gt;</span>
+<span class="c">&lt;!-- Logo + title + search input with submit button --&gt;</span>
+<span class="nt">&lt;bootstrap-nav</span> <span class="na">logo=</span><span class="s">"&lt;img src='somelogo.png'/&gt;"</span> <span class="na">title=</span><span class="s">"Some Title"</span> <span class="na">search-input=</span><span class="s">"searchInputOptions"</span> <span class="na">search-button=</span><span class="s">"submitButtonOptions"</span><span class="nt">&gt;&lt;/bootstrap-nav&gt;</span>
+<span class="c">&lt;!-- Logo + title + search input with select --&gt;</span>
+<span class="nt">&lt;bootstrap-nav</span> <span class="na">logo=</span><span class="s">"&lt;img src='somelogo.png'/&gt;"</span> <span class="na">title=</span><span class="s">"Some Title"</span> <span class="na">search-input=</span><span class="s">"searchInputOptions"</span> <span class="na">search-select=</span><span class="s">"selectOptions"</span><span class="nt">&gt;&lt;/bootstrap-nav&gt;</span>
+</pre></div>
+
+<h2>
+<a name="adding-route-to-menu" class="anchor" href="#adding-route-to-menu"><span class="octicon octicon-link"></span></a>Adding route to menu</h2>
+
+<p>Add <code>name</code> property to route for link name.  Set <code>navitem</code> property to <code>true</code> to include it in the menu.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$routeProvider</span><span class="p">.</span>
+<span class="nx">when</span><span class="p">(</span><span class="s1">'/route1'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">navitem</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">controller</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">'route1'</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="s1">'&lt;p&gt;i am route 1&lt;/p&gt;'</span>
+<span class="p">})</span>
+</pre></div>
+
+<h2>
+<a name="search-input-options" class="anchor" href="#search-input-options"><span class="octicon octicon-link"></span></a>Search Input Options</h2>
+
+<p>Add a placeholder value to the search input.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">searchInputOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">placeholder</span> <span class="o">:</span> <span class="s2">"Search"</span>
+<span class="p">};</span>
+</pre></div>
+
+<p>The input value in this example will be <code>searchInputOptions.value</code>.</p>
+
+<h2>
+<a name="select-options" class="anchor" href="#select-options"><span class="octicon octicon-link"></span></a>Select Options</h2>
+
+<p>Add select values, labels, and a default <em><em>placeholder</em></em> value.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">selectOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"default"</span> <span class="o">:</span> <span class="s2">"Choose A Value"</span><span class="p">,</span>
+  <span class="s2">"options"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="s1">'choicevalue1'</span><span class="p">,</span> <span class="nx">label</span><span class="o">:</span> <span class="s2">"choicelabel1"</span><span class="p">},</span>
+    <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="s1">'choicevalue2'</span><span class="p">,</span> <span class="nx">label</span><span class="o">:</span> <span class="s2">"choicelabel2"</span><span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+
+<p>The selected value in this example will be <code>selectOptions.choice.value</code>.</p>
+
+<h2>
+<a name="submit-button-options" class="anchor" href="#submit-button-options"><span class="octicon octicon-link"></span></a>Submit Button Options</h2>
+
+<p>Add select values, labels, and a default <em><em>placeholder</em></em> value.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">submitButtonOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"placeholder"</span> <span class="o">:</span> <span class="s2">"Search"</span><span class="p">,</span>
+  <span class="s2">"submit"</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"submit button clicked"</span><span class="p">)</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+</pre></div>
+
+<h1>
 <a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h1>
 
 <p>Please view the following documentation for contributing to this project.</p>
@@ -67,20 +138,10 @@ See <a href="http://plnkr.co/edit/JfbDMH">plunkr</a> for details.</p>
 <ul>
 <li><a href="./CONTRIBUTING.md">Contribution Guide</a></li>
 <li><a href="./CHANGELOG.md">Changelog</a></li>
-<li><a href="./angular-bootstrap-nav.html">API</a></li>
 </ul>
       </section>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Angular-bootstrap-nav maintained by <a href="https://github.com/rackerlabs">rackerlabs</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
     
-
   </body>
 </html>
