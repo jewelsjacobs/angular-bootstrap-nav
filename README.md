@@ -50,6 +50,7 @@ Add `name` property to route for link name.  Set `navitem` property to `true` to
       template: '<p>i am route 1</p>'
     })
     ```
+    
 ## Search Input Options
 Add a placeholder value to the search input.
 
@@ -58,6 +59,7 @@ Add a placeholder value to the search input.
       placeholder : "Search"
     };
     ```
+    
 The input value in this example will be `searchInputOptions.value`.
 
 ## Select Options
@@ -72,6 +74,7 @@ Add select values, labels, and a default _*placeholder*_ value.
       ]
     };
     ```
+    
 The selected value in this example will be `selectOptions.choice.value`.
 
 ## Submit Button Options
@@ -83,7 +86,7 @@ Add select values, labels, and a default _*placeholder*_ value.
       "submit" : function () {
         console.log("submit button clicked")
       };
-    }
+    };
     ```
 
 # Contributing
