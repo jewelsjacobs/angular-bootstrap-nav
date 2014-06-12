@@ -59,7 +59,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "default", [
     "bump"
-#    "changelog"
+    "changelog"
     "stage"
   ]
   return
