@@ -19,11 +19,11 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
         routeitem.controller = value.controller
         $scope.routes.push routeitem
 
-      $scope.type = (type) ->
-        if type != undefined
-          "select"
-        else
-          "button"
+    $scope.type = (type) ->
+      if type != undefined
+        "select"
+      else
+        "button"
 
     $scope.isCollapsed = true
 ])

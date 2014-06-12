@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.24
+/* angular-bootstrap-nav - 0.1.32
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -25,16 +25,16 @@
           routeitem.name = value.name;
           routeitem.templateUrl = value.templateUrl;
           routeitem.controller = value.controller;
-          $scope.routes.push(routeitem);
+          return $scope.routes.push(routeitem);
         }
-        return $scope.type = function(type) {
-          if (type !== void 0) {
-            return "select";
-          } else {
-            return "button";
-          }
-        };
       });
+      $scope.type = function(type) {
+        if (type !== void 0) {
+          return "select";
+        } else {
+          return "button";
+        }
+      };
       return $scope.isCollapsed = true;
     }
   ]).directive("bootstrapNav", function() {
