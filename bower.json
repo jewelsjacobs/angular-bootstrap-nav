@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-nav",
-  "version": "0.1.34",
+  "version": "0.1.36",
   "main": "dist/angular-bootstrap-nav.js",
   "ignore": [
     "app",

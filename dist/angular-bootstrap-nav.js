@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.32
+/* angular-bootstrap-nav - 0.1.36
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -88,7 +88,7 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "        <div class=\"input-group\" style=\"max-width: 250px;\"ng-switch-when=\"button\">\n" +
     "          <input type=\"text\" class=\"form-control\" id=\"search\" ng-model=\"searchInput.value\" placeholder=\"{{ searchInput.placeholder }}\">\n" +
     "          <span class=\"input-group-btn\">\n" +
-    "            <button class=\"btn btn-default\" type=\"button\" ng-click=\"searchButton.submit()\">{{ searchButton.placeholder || 'Search' }}</button>\n" +
+    "            <button class=\"btn btn-default\" type=\"submit\" ng-click=\"searchButton.submit()\">{{ searchButton.placeholder || 'Search' }}</button>\n" +
     "          </span>\n" +
     "        </div>\n" +
     "      </div>\n" +

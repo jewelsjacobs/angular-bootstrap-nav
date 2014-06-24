@@ -1,0 +1,13 @@
+<a name="0.1.35"></a>
+### 0.1.35 (2014-06-12)
+
+
+<a name="0.1.34"></a>
+### 0.1.34 (2014-06-12)
+
+
+#### Bug Fixes
+
+* **button:** coffeescript indentation ([50818a6d](http://github.com/rackerlabs/angular-bootstrap-nav/commit/50818a6d3137b8576257031341d0c10e45dda49f))
+
+
