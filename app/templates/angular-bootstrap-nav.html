@@ -26,7 +26,7 @@
         <div class="input-group" style="max-width: 250px;"ng-switch-when="button">
           <input type="text" class="form-control" id="search" ng-model="searchInput.value" placeholder="{{ searchInput.placeholder }}">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="button" ng-click="searchButton.submit()">{{ searchButton.placeholder || 'Search' }}</button>
+            <button class="btn btn-default" type="submit" ng-click="searchButton.submit()">{{ searchButton.placeholder || 'Search' }}</button>
           </span>
         </div>
       </div>
