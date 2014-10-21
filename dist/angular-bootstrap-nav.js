@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.38
+/* angular-bootstrap-nav - 0.1.39
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
