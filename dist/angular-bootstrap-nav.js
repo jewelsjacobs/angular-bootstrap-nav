@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.39
+/* angular-bootstrap-nav - 0.1.41
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -69,7 +69,7 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "      <span class=\"icon-bar\"></span>\n" +
     "      <span class=\"icon-bar\"></span>\n" +
     "    </button>\n" +
-    "    <div ng-if=\"logo\" class=\"logo pull-left\" ng-bind-html=\"logo\"><a href=\"/\"></a></div>\n" +
+    "    <a href=\"/\"><div ng-if=\"logo\" class=\"logo pull-left\" ng-bind-html=\"logo\"></div></a>\n" +
     "    <a id=\"Ludicbrand\" class=\"navbar-brand\" href=\"{{ titleLink }}\">\n" +
     "      <span class=\"thin\" ng-bind=\"title\"></span>\n" +
     "    </a>\n" +
