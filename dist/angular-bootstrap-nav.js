@@ -1,4 +1,4 @@
-/* angular-bootstrap-nav - 0.1.36
+/* angular-bootstrap-nav - 0.1.38
  * 
  * https://github.com/rackerlabs/angular-bootstrap-nav
  */
@@ -44,6 +44,7 @@
       replace: true,
       transclude: false,
       scope: {
+        'titleLink': '@?',
         'title': "@?",
         'logo': '=?',
         'searchInput': '=?',
@@ -68,8 +69,8 @@ angular.module("bootstrap.navbar").run(["$templateCache", function($templateCach
     "      <span class=\"icon-bar\"></span>\n" +
     "      <span class=\"icon-bar\"></span>\n" +
     "    </button>\n" +
-    "    <div ng-if=\"logo\" class=\"logo pull-left\" ng-bind-html=\"logo\"></div>\n" +
-    "    <a id=\"Ludicbrand\" class=\"navbar-brand\" href=\"/\">\n" +
+    "    <div ng-if=\"logo\" class=\"logo pull-left\" ng-bind-html=\"logo\"><a href=\"/\"></a></div>\n" +
+    "    <a id=\"Ludicbrand\" class=\"navbar-brand\" href=\"{{ titleLink }}\">\n" +
     "      <span class=\"thin\" ng-bind=\"title\"></span>\n" +
     "    </a>\n" +
     "  </div>\n" +

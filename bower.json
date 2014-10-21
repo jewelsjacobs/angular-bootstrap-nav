@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-nav",
-  "version": "0.1.37",
+  "version": "0.1.38",
   "main": "dist/angular-bootstrap-nav.js",
   "ignore": [
     "app",
@@ -24,12 +24,12 @@
     ".npmignore"
   ],
   "dependencies": {
-    "angular-route": "1.2.26",
+    "angular-route": "~1.2.16",
     "bootstrap": "~3.1.1",
-    "angular": "1.2.26",
-    "angular-ui-bootstrap": "latest",
-    "angular-ui-bootstrap-bower": "~0.11.0",
-    "angular-sanitize": "1.2.26"
+    "angular": "~1.2.16",
+    "angular-ui-bootstrap": "~0.10.0",
+    "angular-ui-bootstrap-bower": "~0.10.0",
+    "angular-sanitize": "~1.2.16"
   },
   "devDependencies": {
     "jasmine-jquery": "~2.0.3"

@@ -33,6 +33,7 @@ angular.module("bootstrap.navbar", ['ngRoute', 'ngSanitize'])
   replace: true
   transclude: false
   scope:
+    'titleLink': '@?',
     'title': "@?",
     'logo': '=?',
     'searchInput': '=?',
