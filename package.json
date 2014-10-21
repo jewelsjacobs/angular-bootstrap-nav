@@ -1,7 +1,7 @@
 {
   "name": "angular-bootstrap-nav",
   "title": "AngularJS (Angular) directive for Twitter's Bootstrap's Navbar component.",
-  "version": "0.1.41",
+  "version": "0.1.42",
   "repository": {
     "type": "git",
     "url": "git://github.com/rackerlabs/angular-bootstrap-nav.git"
